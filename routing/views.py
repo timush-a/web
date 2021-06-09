@@ -7,12 +7,10 @@ def simple_route(request):
     return HttpResponse(content='')
 
 
-@require_GET
 def slug_route(request):
     return HttpResponse(content=request.path.split('/')[3])
 
 
-@require_GET
 def sum_route(request):
     first_value = int(request.path.split('/')[3])
     second_value = int(request.path.split('/')[4])
