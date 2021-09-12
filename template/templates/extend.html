@@ -1,0 +1,20 @@
+{% extends "./base.html" %}
+<--
+Шаблон, который необходимо отредактировать template/templates/extend.html.
+Решение должно быть файлом extend.html.
+
+Нужно написать шаблон которые наследуется от template/templates/base.html и
+переопределяет блоки block_a, block_b. В блоках block_a, block_b должно остаться,
+то что было у родительского шаблона и дополнительно вывести параметр “a” и параметр “b”
+-->
+
+{% block block_a %}
+    {{ block.super }}
+    {{a}}
+{% endblock %}
+
+{% block block_b %}
+    {{ block.super }}
+    {{b}}
+{% endblock %}
+
